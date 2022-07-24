@@ -1,4 +1,94 @@
 footer.footer
-	.container
-		.row
-			.col-12 footer
+	.footer-top
+		.container
+			.row
+				.col-4
+					.footer-top__title Хотите узнать больше?
+						br
+						|Позвоните нам
+
+					.footer-contacts
+						.footer-contacts__item
+							a(href="tel:+78125771887").footer-contacts__link
+								+svg('ic-call-stroke','ic-call-stroke', '18', '18')
+								|+7 (812) 577-18-87
+
+						.footer-contacts__item
+							a(href="tel:+78125774616").footer-contacts__link
+								+svg('ic-call-stroke','ic-call-stroke', '18', '18')
+								|+7 (812) 577-46-16
+					
+					.footer-top__address Санкт-Петербург, Фуражный пер, 4, офис15
+
+				.col-8
+					.js-valid-form
+						form.form-site.form-site_hor
+							.form-site__title Или просто заполните форму и мы сами Вам перезвоним
+							
+							.form-site__content
+								.form-site__item.js-form-site-item
+									.form-site__field
+										input(type="text", placeholder="Ваше имя")
+
+								.form-site__item.js-form-site-item
+									.form-site__field
+										input(type="text", required="required", placeholder="Ваш номер телефона *", class="js-phone")
+
+								.form-site__item.js-form-site-item
+									.form-site__field
+											textarea(placeholder="Опишите интересующий Вас вопрос...")
+
+							.form-site__btn
+								button(type="submit").btn.js-btn-submit Отправить
+
+							.form-site__polit Нажимая кнопку «Отправить» Вы соглашаетесь на обработку Ваших персональных данных
+
+	.footer-bottom
+		.container
+			.row
+				.col-4
+					.footer-bottom__logo
+						img(src="assets/img/logo-white.svg", alt="")
+
+				.col-3
+					a.btn.btn_radius.btn_white(href='#') Написать директору
+						+svg('ic-mail','ic-mail', '20', '12')
+
+				.col-5
+					.footer-bottom__info
+						|ООО «Строй-Эксперт» 
+						a(href="mailto:stekspert.ru") stekspert.ru 
+						a(href="#") Google+
+						br
+						|© 2002-2020. Все права защищены. 
+						a(href="#") Карта сайта
+
+#feadback(style='display: none;')
+	.popup-form
+		.js-valid-form
+			form.form-site
+				.form-site__title Связь с нами
+				.form-site__text Заполните форму ниже и мы перезвоним Вам в течение 5 минут
+				
+				.form-site__content
+					.form-site__item.js-form-site-item
+						.form-site__field
+							input(type="text", placeholder="Ваше имя")
+
+					.form-site__item.js-form-site-item
+						.form-site__field
+							input(type="text", required="required", placeholder="Ваш номер телефона *", class="js-phone")
+
+				.form-site__btn
+					button(type="submit").btn.js-btn-submit Перезвоните мне
+
+				.form-site__polit Нажимая кнопку «Перезвоните мне» Вы соглашаетесь на обработку данных.
+
+#msg-success(style='display: none;')
+	.success-alert.js-success-alert
+		.success-alert__icon
+			+svg('ic-tick-circle','ic-tick-circle', '50', '50')
+
+		.success-alert__title.js-success-alert-title Спасибо!
+		.success-alert__text.js-success-alert-text Мы перезвоним Вам в течение 5 минут
+		span.btn Хорошо

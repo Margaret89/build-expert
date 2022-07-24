@@ -1,4 +1,65 @@
 header.header
 	.container
 		.row
-			.col-12 header
+			.col-12
+				.header__content
+					.header__info
+						.header__logo
+							a(href="#")
+								img(src="assets/img/logo.svg", alt="")
+
+
+						a.btn.btn_radius.btn_white(href='#') Написать директору
+							+svg('ic-mail','ic-mail', '20', '12')
+
+					.header-contacts
+						a(href="tel:+78125774616").header-contacts__item
+							span.header-contacts__icon
+								+svg('ic-call','ic-call', '14', '14')
+							span.header-contacts__text +7 (812) 577-46-16
+
+						a(href="tel:+78125771887").header-contacts__item
+							span.header-contacts__icon
+								+svg('ic-call','ic-call', '14', '14')
+							span.header-contacts__text +7 (812) 577-18-87
+
+						a.btn.btn_radius(data-fancybox, data-src="#feadback") Связаться с нами
+
+	nav.main-menu
+		ul.main-menu__list
+			-
+				var list=[
+					{text:'Главная', status:'active'},
+					{text:'О компании'},
+					{text:'Услуги', services:'true'},
+					{text:'Цены'},
+					{text:'Объекты'},
+					{text:'Клиенты'},
+					{text:'Лицензии'},
+					{text:'Статьи'},
+					{text:'Отзывы'},
+					{text:'Контакты'},
+				]
+			each item in list
+				li.main-menu__item
+					a(href="#", item.status?'active':'').main-menu__link= item.text
+
+					if(item.services)
+						ul.main-menu-serv
+							-
+								var sub=[
+									{icon:'ic-hotel', icon_width:'55', icon_height:'55', text:'Техническое обследование зданий'},
+									{icon:'ic-nuclear-plant', icon_width:'55', icon_height:'55', text:'Техническое обследование объектов энергетики'},
+									{icon:'ic-government', icon_width:'55', icon_height:'55', text:'Техническое обследование объектов культурного наследия'},
+									{icon:'ic-crane', icon_width:'55', icon_height:'55', text:'Мониторинг строительных объектов'},
+									{icon:'ic-escalator', icon_width:'55', icon_height:'50', text:'Сопровождение строительства'},
+									{icon:'ic-ground', icon_width:'55', icon_height:'55', text:'Земельные работы'},
+									{icon:'ic-insurance', icon_width:'55', icon_height:'55', text:'Строительный контроль'},
+									{icon:'ic-architecture', icon_width:'55', icon_height:'55', text:'Строительное проектирование'},
+								]
+							each item in list
+								li.main-menu-serv__item
+									a(href="#").main-menu-serv__link
+										sapn.main-menu-serv__icon
+											+svg(item.icon, item.icon, item.icon_width, item.icon_height)
+										sapn.main-menu-serv__text= item.text
