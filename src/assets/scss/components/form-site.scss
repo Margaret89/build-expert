@@ -1,154 +1,186 @@
-// /*-------------- form-site -----------------*/
-// .form-site{
-// 	position: relative;
+/*-------------- form-site -----------------*/
+.form-site{
+	// position: relative;
 
-// 	&__title{
-// 		@include font(none, 500, 2.4rem, 1.5, $color-black);
-// 		text-align: center;
-// 		margin-bottom: 30px;
-// 	}
+	&__title{
+		@include font(none, bold, 2.2rem, 1.375, none);
+		text-align: center;
+		margin-bottom: 30px;
+	}
 
-// 	&__text{margin-bottom: 20px;}
-
-// 	&__label{
-// 		@include font(none, none, 1.4rem, 1.5, $color-black);
-// 		margin-bottom: 4px;
-// 	}
-
-// 	&__content{
-// 		justify-content: space-between;
-// 		margin-left: -10px;
-// 		margin-right: -10px;
-// 	}
+	&__text{
+		@include font(none, none, 1.6rem, 1.375, none);
+		text-align: center;
+		margin-bottom: 20px;
+	}
 	
-// 	&__item{
-// 		margin-bottom: 21px;
-// 		margin-left: 10px;
-// 		margin-right: 10px;
-// 	}
+	&__item{
+		width: 100%;
+		margin-bottom: 20px;
+	}
 
-// 	&__item.error{position: relative;}
+	&__item.error{position: relative;}
 
-// 	input[type="text"],
-// 	input[type="email"],
-// 	input[type="number"],
-// 	input[type="password"],
-// 	textarea{
-// 		display: inline-flex;
-// 		align-items: center;
-// 		height: 5.5rem;
-// 		width: 100%;
-// 		font-family: $font-site;
-// 		@include font(normal, 500, 1.4rem, 1.2, $color-black);
-// 		padding: 0 20px; 
-// 		border-radius: 10px;
-// 		border: 1px solid #e7e7e7;
-// 		background: #f5f5f5;
-// 		outline: none;
-// 		margin: 0;
-// 		box-shadow: none;
-// 		transition: border 0.2s ease 0s;
-// 	}
+	input[type="text"],
+	input[type="email"],
+	input[type="number"],
+	input[type="password"],
+	textarea{
+		display: inline-flex;
+		align-items: center;
+		height: 5.3rem;
+		width: 100%;
+		font-family: $font-site;
+		@include font(none, none, 1.6rem, 1.2, $color-text);
+		padding: 0 20px; 
+		border-radius: 3px;
+		border: 2px solid #e8e8e8;
+		background: #fff;
+		outline: none;
+		margin: 0;
+		box-shadow: none;
+		transition: border 0.2s ease 0s;
+	}
 
-// 	textarea{
-// 		height: 16rem;
-// 		line-height: 1.6;
-// 		padding-top: 1.5rem;
-// 		padding-bottom: 1.5rem;
-// 	}
+	textarea{
+		height: 10.4rem;
+		line-height: 1.6;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
 
-// 	input[type="text"]:focus,
-// 	input[type="number"]:focus,
-// 	input[type="email"]:focus,
-// 	input[type="password"]:focus,
-// 	textarea:focus{
-// 		border-color: $color-black;
-// 	}
+	input[type="text"]:focus,
+	input[type="number"]:focus,
+	input[type="email"]:focus,
+	input[type="password"]:focus,
+	textarea:focus{
+		border-color: $color-orange;
+	}
 
-// 	input[type="text"]::placeholder,
-// 	input[type="number"]::placeholder,
-// 	input[type="email"]::placeholder,
-// 	input[type="password"]::placeholder,
-// 	textarea::placeholder{
-// 		font-size: 1.4rem;
-// 		font-weight: normal;
-// 	}
+	&__item.error{
+		input[type="text"],
+		input[type="number"],
+		input[type="email"],
+		input[type="password"],
+		textarea{
+			border-color: #fc6262;
+		}
 
-// 	&__item.error{
-// 		input[type="text"],
-// 		input[type="number"],
-// 		input[type="email"],
-// 		input[type="password"],
-// 		textarea{
-// 			border-color: #fcc1c1;
-// 		}
+		input[type="text"]::placeholder,
+		input[type="number"]::placeholder,
+		input[type="email"]::placeholder,
+		input[type="password"]::placeholder,
+		textarea::placeholder{
+			color: $color-red;
+			opacity: 1;
+		}
+	}
 
-// 		input[type="text"]::placeholder,
-// 		input[type="number"]::placeholder,
-// 		input[type="email"]::placeholder,
-// 		input[type="password"]::placeholder,
-// 		textarea::placeholder{
-// 			color: $color-red;
-// 			opacity: 1;
-// 		}
+	&__polit{
+		@include font(none, none, 1.4rem, 1.375, none);
+		text-align: center;
+		margin-top: 30px;
+	}
 
-// 	}
+	.form-site-msg-error{
+		@include font(none, none, 1.4rem, 1.2, $color-red);
+		margin-top: 5px;
+		position: absolute;
+		top: 100%;
+		left: 0;
+	}
 
-// 	&__polit{
-// 		position: relative;
+	&__bottom{margin-top: 30px;}
 
-// 		.input-check{
-// 			&__label{font-size: 1.3rem;}
-// 			&__label a{color: #908787;}
-// 		}
-// 	}
+	&__btn{
+		text-align: center;
 
-// 	.form-site-msg-error{
-// 		@include font(none, none, 1.4rem, 1.2, $color-red);
-// 		margin-top: 5px;
-// 		position: absolute;
-// 		top: 100%;
-// 		left: 0;
-// 	}
+		.btn{width: 100%;}
+	}
 
-// 	&__btn{
-// 		text-align: center;
-// 		margin-top: 44px;
+	&_hor{
+		input[type="text"],
+		input[type="email"],
+		input[type="number"],
+		input[type="password"]{
+			height: 4.2rem;
+		}
 
-// 		.btn{width: 100%;}
-// 	}
+		input[type="text"],
+		input[type="email"],
+		input[type="number"],
+		input[type="password"],
+		textarea{
+			font-size: 1.4rem;
+		}
+	}
 
-// 	// &__error{
-// 	// 	@include font(normal, normal, 1.6rem, 1.2, $color-red);
-// 	// 	margin-bottom: 10px;
-// 	// }
-// }
+	&_hor &__title{
+		font-size: 2.6rem;
+		text-align: left;
+		margin-bottom: 22px;
+	}
 
-// .success-alert{
-// 	width: 500px;
-// 	text-align: center;
+	&_hor &__text{text-align: left;}
 
-// 	&__icon{
-// 		margin-bottom: 3rem;
+	&_hor &__content{
+		display: flex;
+		margin-left: -10px;
+		margin-right: -10px;
+	}
 
-// 		.icon{fill: $color-red;}
-// 	}
+	&_hor &__col{
+		width: calc(38% - 20px);
+		margin-left: 10px;
+		margin-right: 10px;
+	}
 
-// 	&__title{
-// 		@include font(none, 500, 2.8rem, 1.5, $color-black);
-// 	}
+	&_hor &__col_long{width: calc(62% - 20px);}
 
-// 	&__text{
-// 		max-width: 350px;
-// 		@include font(none, none, 1.4rem, 1.75, none);
-// 		margin: 2rem auto 0;
-// 	}
-// }
+	&_hor &__bottom{
+		display: flex;
+		align-items: center;
+		margin: 0 -10px;
+	}
 
-// .popup-form{
-// 	width: 500px;
-// 	max-width: 100%;
-// }
+	&_hor &__btn{
+		flex-shrink: 0;
+		width: calc(38% - 20px);
+		margin: 0 10px;
+	}
+
+	&_hor &__polit{
+		margin: 0 10px;
+		text-align: left;
+	}
+}
+
+.success-alert{
+	width: 378px;
+	text-align: center;
+
+	&__title{
+		@include font(none, bold, 2.2rem, 1.375, none);
+		margin-bottom: 20px;
+	}
+
+	&__text{
+		@include font(none, none, 1.6rem, 1.375, none);
+		margin-bottom: 30px;
+	}
+}
+
+.popup-form{
+	width: 770px;
+	max-width: 100%;
+
+	.form-site{
+		&__content{
+			max-width: 378px;
+			margin: 0 auto;
+		}
+	}
+}
 
 // .form-page{
 // 	background: linear-gradient(180deg, #181818 0%, #383838 100%);

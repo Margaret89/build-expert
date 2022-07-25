@@ -3,11 +3,12 @@ $path-img: "../img";
 $path-fonts: "../fonts";
 
 //Font
-$font-site:  Arial, sans-serif;
+$font-site: 'Roboto', Arial, sans-serif;
 
 // Site
 $color-text: #000;
 $color-orange: #ff6700;
+$color-red: #F81717;
 
 // Grid
 $grid-breakpoints: (
@@ -24,7 +25,7 @@ $container-max-widths: (
   md: 720px,
   lg: 960px,
   xl: 1190px,
-  xxl: 1190px
+  xxl: 1180px
 ) !default;
 
-$grid-gutter-width: 30px !default;
+$grid-gutter-width: 20px !default;

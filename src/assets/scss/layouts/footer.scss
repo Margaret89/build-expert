@@ -1,10 +1,20 @@
 .footer-top{
 	background: url(../img/bg-footer.jpg) no-repeat center;
-	padding: 50px 0;
+	padding: 67px 0;
 	color: #fff;
 
 	&__title{
-		@include font(none, bold, 3.2rem, 1.375, none);
+		@include font(none, bold, 3.2rem, 1.2, none);
+		margin-bottom: 28px;
+	}
+
+	&__address{
+		@include font(none, none, 1.4rem, 1.375, none);
+		margin-top: 20px;
+	}
+
+	.form-site{
+		padding-top: 3px;
 	}
 }
 
@@ -13,7 +23,7 @@
 
 	&__link{
 		display: inline-flex;
-		padding: 5px 10px;
+		padding: 10px 15px;
 		border-radius: 3px;
 		@include font(none, bold, 1.6rem, 1.2, #fff);
 		text-decoration: none;
@@ -29,11 +39,6 @@
 			background-image: linear-gradient(to right, rgba(255,103,0,1) 50%, rgba(255,166,0,1) 100%);
 			box-shadow: 0px 10px 10px 0px rgba(255,104,0,0.3);
 		}
-	}
-
-	&__address{
-		@include font(none, none, 1.6rem, 1.375, none);
-		margin-top: 50px;
 	}
 }
 

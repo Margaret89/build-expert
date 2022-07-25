@@ -26,22 +26,25 @@ footer.footer
 							.form-site__title Или просто заполните форму и мы сами Вам перезвоним
 							
 							.form-site__content
-								.form-site__item.js-form-site-item
-									.form-site__field
-										input(type="text", placeholder="Ваше имя")
+								.form-site__col
+									.form-site__item.js-form-site-item
+										.form-site__field
+											input(type="text", placeholder="Ваше имя")
 
-								.form-site__item.js-form-site-item
-									.form-site__field
-										input(type="text", required="required", placeholder="Ваш номер телефона *", class="js-phone")
+									.form-site__item.js-form-site-item
+										.form-site__field
+											input(type="text", required="required", placeholder="Ваш телефон *", class="js-phone")
 
-								.form-site__item.js-form-site-item
-									.form-site__field
-											textarea(placeholder="Опишите интересующий Вас вопрос...")
+								.form-site__col.form-site__col_long
+									.form-site__item.js-form-site-item
+										.form-site__field
+												textarea(placeholder="Опишите интересующий Вас вопрос...")
 
-							.form-site__btn
-								button(type="submit").btn.js-btn-submit Отправить
+							.form-site__bottom
+								.form-site__btn
+									button(type="submit").btn.js-btn-submit Отправить
 
-							.form-site__polit Нажимая кнопку «Отправить» Вы соглашаетесь на обработку Ваших персональных данных
+								.form-site__polit Нажимая кнопку «Отправить» Вы соглашаетесь на обработку Ваших персональных данных
 
 	.footer-bottom
 		.container
@@ -51,7 +54,7 @@ footer.footer
 						img(src="assets/img/logo-white.svg", alt="")
 
 				.col-3
-					a.btn.btn_radius.btn_white(href='#') Написать директору
+					a.btn.btn_radius.btn_white.btn_small(href='#') Написать директору
 						+svg('ic-mail','ic-mail', '20', '12')
 
 				.col-5
@@ -79,10 +82,11 @@ footer.footer
 						.form-site__field
 							input(type="text", required="required", placeholder="Ваш номер телефона *", class="js-phone")
 
-				.form-site__btn
-					button(type="submit").btn.js-btn-submit Перезвоните мне
+				.form-site__bottom
+					.form-site__btn
+						button(type="submit").btn.js-btn-submit Перезвоните мне
 
-				.form-site__polit Нажимая кнопку «Перезвоните мне» Вы соглашаетесь на обработку данных.
+					.form-site__polit Нажимая кнопку «Перезвоните мне» Вы соглашаетесь на обработку данных.
 
 #msg-success(style='display: none;')
 	.success-alert.js-success-alert
