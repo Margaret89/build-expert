@@ -8,6 +8,12 @@ body{
 
 body{font-size: 1.6rem;}
 
+body.no-scroll{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
 *,
 *:before,
 *:after {
@@ -211,4 +217,31 @@ button.btn{
 	&_orange &__icon .icon{fill: $color-orange;}
 	&_orange:hover &__text{color: $color-text;}
 	&_orange:hover &__icon .icon{fill: $color-text;}
+}
+
+@media (max-width: 767px) {
+	body{font-size: 1.4rem;}
+
+	.h1, h1{
+		font-size: 2.6rem;
+		margin-bottom: 3rem;
+	}
+	
+	.h2, h2{
+		font-size: 2.6rem;
+		margin-bottom: 3rem;
+	}
+
+	h2 + p, .h2 + p{margin-top: -1.5rem;}
+
+	ol, p, ul{margin-bottom: 1.5rem;}
+
+	main{padding-bottom: 60px;}
+	.last-elem{margin-bottom: -60px;}
+
+	.container{
+		max-width: 100%!important;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 }

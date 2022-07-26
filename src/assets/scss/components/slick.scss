@@ -67,9 +67,9 @@
 // 	}
 // }
 
-// @media (max-width: 1500px) {
-// 	.btn-arr{
-// 		&_left{left: 0;}
-// 		&_right{right: 0;}
-// 	}
-// }
+@media (max-width: 767px) {
+	.btn-arr{
+		&_left{left: 0;}
+		&_right{right: 0;}
+	}
+}

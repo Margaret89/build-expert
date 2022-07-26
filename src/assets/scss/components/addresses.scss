@@ -30,3 +30,13 @@
 		@include font(none, none, 1.6rem, 1.375, $color-text);;
 	}
 }
+
+@media (max-width: 767px) {
+	.addresses-wrap{padding: 40px 0;}
+
+	.addresses{
+		column-count: 2;
+
+		&__text{font-size: 1.4rem;}
+	}
+}

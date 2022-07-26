@@ -33,3 +33,13 @@
 
 	&__text_line{text-decoration: underline;}
 }
+
+@media (max-width: 767px) {
+	.advant-wrap{padding-bottom: 40px;}
+
+	.advant-item{
+		margin: 18px 0;
+		&__icon{height: 40px;}
+		&__text{font-size: 1.4rem;}
+	}
+}

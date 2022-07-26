@@ -109,3 +109,14 @@
 
 	&_small &__polit{font-size: 1.4rem;}
 }
+
+@media (max-width: 767px) {
+	.form-line{
+		text-align: center;
+		&__title{font-size: 2.4rem;}
+		&__content{display: block;}
+		&__fields{margin: 0 0 20px;}
+		&__polit{font-size: 1.4rem;}
+		.btn{width: 100%;}
+	}
+}

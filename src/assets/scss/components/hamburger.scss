@@ -1,0 +1,67 @@
+/*-------------- hamburger -----------------*/
+.ic-hamburger{
+	flex-shrink: 0;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	width: 32px;
+	height: 32px;
+	border: 2px solid $color-text;
+	border-radius: 50%;
+	font-size: 0;
+	text-indent: -9999px;
+	appearance: none;
+	box-shadow: none;
+	cursor: pointer;
+
+	&:focus{outline: none;}
+	
+	span {
+		display: block;
+		width: calc(100% - 12px);
+		height: 2px;
+		position: absolute;
+		top: 14px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		background: $color-text;
+		transition: background 0.2s ease 0s;
+	}
+	
+	span::before,
+	span::after {
+		content: "";
+		display: block;
+		height: 2px;
+		width: 100%;
+		background: $color-text;
+		position: absolute;
+		left: 0;
+		transition: background 0.2s ease 0s;
+	}
+	
+	span::before{top: -6px;}
+	span::after{bottom: -6px;}
+	
+	span::before {transition: top 0.3s ease 0.3s, transform 0.3s ease 0s;}
+	span::after {transition: bottom 0.3s ease 0.3s, transform 0.3s ease 0s;}
+	
+	&.active span {background: none;}
+	
+	&.active span::before {
+		top: 0;
+		transform: rotate(45deg);
+	}
+	
+	&.active span::after {
+		bottom: 0;
+		transform: rotate(-45deg);
+	}
+	
+	&.active span::before {transition: top 0.3s ease 0s, transform 0.3s ease 0.3s;}
+	&.active span::after {transition: bottom 0.3s ease 0s, transform 0.3s ease 0.3s;}
+}

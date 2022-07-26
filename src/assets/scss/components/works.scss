@@ -47,3 +47,15 @@
 
 	&:hover &__more{display: inline-block;}
 }
+
+@media (max-width: 767px) {
+	.works-wrap{
+		padding: 40px 0;
+		&__more{margin-top: 15px;}
+	}
+
+	.work-item{
+		&__more{display: inline-block;}
+		&__text{font-size: 1.6rem;}
+	}
+}

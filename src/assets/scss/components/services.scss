@@ -79,3 +79,19 @@
 	.ic-eye{margin-top: -5px;}
 	&:hover{color: $color-text;}
 }
+
+@media (max-width: 991px) {
+	.services-wrap{padding: 58px 0 80px;}
+}
+
+@media (max-width: 767px) {
+	.services-wrap{
+		padding: 40px 0 50px;
+		&__more{margin-top: 0;}
+	}
+
+	.services-sect{
+		margin-bottom: 45px;
+		&__title{font-size: 1.6rem;}
+	}
+}

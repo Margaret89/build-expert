@@ -1,11 +1,9 @@
 /*-------------- form-site -----------------*/
 .form-site{
-	// position: relative;
-
 	&__title{
 		@include font(none, bold, 2.2rem, 1.375, none);
 		text-align: center;
-		margin-bottom: 30px;
+		margin-bottom: 10px;
 	}
 
 	&__text{
@@ -156,18 +154,20 @@
 }
 
 .success-alert{
-	width: 378px;
+	width: 770px;
 	text-align: center;
 
 	&__title{
 		@include font(none, bold, 2.2rem, 1.375, none);
-		margin-bottom: 20px;
+		margin-bottom: 12px;
 	}
 
 	&__text{
 		@include font(none, none, 1.6rem, 1.375, none);
 		margin-bottom: 30px;
 	}
+
+	.btn{width: 378px;}
 }
 
 .popup-form{
@@ -175,121 +175,63 @@
 	max-width: 100%;
 
 	.form-site{
-		&__content{
+		&__content,
+		&__bottom{
 			max-width: 378px;
 			margin: 0 auto;
 		}
+
+		&__content{margin-top: 50px;}
 	}
 }
 
-// .form-page{
-// 	background: linear-gradient(180deg, #181818 0%, #383838 100%);
-// 	color: #fff;
-// 	padding: 50px 0;
-// 	position: relative;
+@media (max-width: 767px) {
+	.form-site{
+		text-align: center;
 
-// 	&::before{
-// 		content: '';
-// 		display: block;
-// 		width: 100%;
-// 		height: 100%;
-// 		background: url(../img/bg-phone.png) no-repeat top center;
-// 		opacity: 0.3;
-// 		position: absolute;
-// 		top: 0;
-// 		left: 0;
-// 	}
+		&__text{font-size: 1.4rem;}
 
-// 	.form-site{
-// 		&__title{color: #fff;}
-// 		&__label{color: #fff;}
-// 	}
-// }
+		&_hor &__content{
+			display: block;
+			margin-left: 0;
+			margin-right: 0;
+		}
 
-// @media (min-width: 768px) {
-// 	.form-site{
-// 		&__content{
-// 			display: flex;
-// 			flex-wrap: wrap;
-// 			margin-left: -10px;
-// 			margin-right: -10px;
-// 		}
+		&_hor &__title{
+			font-size: 2.4rem;
+			text-align: center;
+		}
 
-// 		&__title{
-// 			font-size: 3rem;
-// 			margin-bottom: 38px;
-// 		}
+		&_hor &__col{
+			width: auto;
+			margin-left: 0;
+			margin-right: 0;
+		}
 
-// 		&__text{margin-bottom: 44px;}
+		&_hor &__bottom{
+			display: block;
+			margin: 0;
+		}
 
-// 		&__item{
-// 			width: calc(100% - 20px);
-// 			margin-left: 10px;
-// 			margin-right: 10px;
-// 			margin-bottom: 25px;
-// 		}
-		
-// 		&__item_half{width: calc(50% - 20px);}
-// 		&__col{width: 50%;}
+		&_hor &__btn{
+			width: auto;
+			margin: 0;
+		}
 
-// 		input[type="text"],
-// 		input[type="email"],
-// 		input[type="number"],
-// 		input[type="password"],
-// 		textarea{
-// 			font-size: 1.6rem;
-// 		}
+		&_hor &__polit{
+			text-align: center;
+			margin-top: 15px;
+		}
+	}
 
-// 		textarea{height: 12.5rem;}
+	.popup-form{
+		.form-site{
+			&__content{margin-top: 30px;}
 
-// 		&__btn{
-// 			text-align: left;
-// 			.btn{width: auto;}
-// 		}
-
-// 		&__item_full-height{
-// 			display: flex;
-// 			flex-direction: column;
-// 			height: calc(100% - 25px);
-// 		}
-
-// 		&__item_full-height &__field,
-// 		&__item_full-height textarea{
-// 			height: 100%;
-// 		}
-
-// 		&__polit{margin-top: 8px;}
-// 	}
-
-// 	.success-alert{
-// 		&__title{font-size: 3rem;}
-// 		&__text{font-size: 1.6rem;}
-// 	}
-
-// 	.form-page{
-// 		padding: 77px 0;
-
-// 		.form-site{
-// 			&__title{
-// 				text-align: left;
-// 				margin-bottom: 22px;
-// 			}
-// 		}
-// 	}
-// }
-
-// @media (min-width: 1160px) {
-// 	.form-site{
-// 		&__col{width: calc(50% - 19px);}
-// 	}
-// }
-
-// @media (min-width: 1340px) {
-// 	.form-page{
-// 		&::before{background-position: top right;}
-// 	}
-
-// 	.form-site{
-// 		&__text{max-width: 1010px;}
-// 	}
-// }
+			&__polit{
+				font-size: 1.2rem;
+				margin-top: 15px;
+			}
+		}
+	}
+}

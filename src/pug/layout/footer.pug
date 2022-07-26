@@ -2,7 +2,7 @@ footer.footer
 	.footer-top
 		.container
 			.row
-				.col-4
+				.col-lg-4.order-2.order-md-1
 					.footer-top__title Хотите узнать больше?
 						br
 						|Позвоните нам
@@ -20,7 +20,7 @@ footer.footer
 					
 					.footer-top__address Санкт-Петербург, Фуражный пер, 4, офис15
 
-				.col-8
+				.col-lg-8.order-1.order-md-2
 					.js-valid-form
 						form.form-site.form-site_hor
 							.form-site__title Или просто заполните форму и мы сами Вам перезвоним
@@ -46,15 +46,15 @@ footer.footer
 	.footer-bottom
 		.container
 			.row
-				.col-4
+				.col-md-4.order-3.order-md-1
 					.footer-bottom__logo
 						img(src="assets/img/logo-white.svg", alt="")
 
-				.col-3
+				.col-md-3.order-2.order-md-2
 					a.btn.btn_radius.btn_white.btn_small(href='#') Написать директору
 						+svg('ic-mail','ic-mail', '20', '12')
 
-				.col-5
+				.col-md-5.order-1.order-md-3
 					.footer-bottom__info
 						|ООО «Строй-Эксперт» 
 						a(href="mailto:stekspert.ru") stekspert.ru 
@@ -81,13 +81,12 @@ footer.footer
 					.form-site__btn
 						button(type="submit").btn.js-btn-submit Перезвоните мне
 
-					.form-site__polit Нажимая кнопку «Перезвоните мне» Вы соглашаетесь на обработку данных.
+					.form-site__polit Нажимая кнопку «Перезвоните мне»
+						br
+						|Вы соглашаетесь на обработку данных.
 
 #msg-success(style='display: none;')
 	.success-alert.js-success-alert
-		.success-alert__icon
-			+svg('ic-tick-circle','ic-tick-circle', '50', '50')
-
 		.success-alert__title.js-success-alert-title Спасибо!
 		.success-alert__text.js-success-alert-text Мы перезвоним Вам в течение 5 минут
 		span.btn Хорошо

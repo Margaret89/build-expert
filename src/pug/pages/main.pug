@@ -45,7 +45,7 @@ block content
 									{icon:'ic-map', icon_width:'95', icon_height:'60', text:'В 24 регионах России', line:'true'},
 								]
 							each item in list
-								.col-3
+								.col-6.col-lg-3
 									.advant-item
 										.advant-item__icon
 											+svg(item.icon, item.icon, item.icon_width, item.icon_height)
@@ -54,11 +54,11 @@ block content
 	section.consult
 		.container
 			.row
-				.col-4
+				.col-4.d-none.d-lg-block
 					.consult__img
 						img(src="assets/img/woman.png", alt="")
 
-				.col-8
+				.col-lg-8
 					.consult__bg
 						img(src="assets/img/phone.png", alt="")
 
@@ -68,7 +68,7 @@ block content
 							
 							.form-line__content
 								.form-line__fields
-									.form-line__item.js-form-line-item
+									.form-line__item.js-form-site-item
 										input(type="text", required="required", placeholder="Ваш номер телефона *", class="js-phone")
 
 								.form-line__btn
@@ -83,7 +83,7 @@ block content
 					h2 Услуги нашей компании
 
 			.row
-				.col-6
+				.col-md-6
 					.services-sect
 						.services-sect__top
 							.services-sect__icon
@@ -108,7 +108,7 @@ block content
 							span.services-sect-more__icon
 								+svg('ic-eye','ic-eye', '24', '20')
 
-				.col-6
+				.col-md-6
 					.services-sect
 						.services-sect__top
 							.services-sect__icon
@@ -133,7 +133,7 @@ block content
 							span.services-sect-more__icon
 								+svg('ic-eye','ic-eye', '24', '20')
 
-				.col-6
+				.col-md-6
 					.services-sect
 						.services-sect__top
 							.services-sect__icon
@@ -158,7 +158,7 @@ block content
 							span.services-sect-more__icon
 								+svg('ic-eye','ic-eye', '24', '20')
 				
-				.col-6
+				.col-md-6
 					.services-sect
 						.services-sect__top
 							.services-sect__icon
@@ -191,7 +191,7 @@ block content
 	section.about
 		.container
 			.row
-				.col-6
+				.col-md-6.order-2.order-md-1
 					h2 О компании Строй Эксперт
 
 					p Экспертиза промышленной безопасности сегодня является необходим условием для успешной и безопасной работы всех предприятий России. Компания «Строй Эксперт» успешно занимается экспертизой промышленных зданий и объектов с 2002 года, и сегодня мы являемся признанными профессионалами рынка.
@@ -203,7 +203,7 @@ block content
 							+svg('ic-arr-right','ic-arr-right', '14', '12')
 
 
-				.offset-1.col-5
+				.offset-md-1.col-md-5.order-1.order-md-2
 					.about__img
 						img(src="assets/img/model.jpg", alt="")
 
@@ -255,7 +255,7 @@ block content
 						{img:'work6.jpg', text:'Техническое диагностирование печи первичного риформинга цеха аммиака'},
 					]
 				each item in list
-					.col-4
+					.col-md-4
 						a(href="#").work-item(style="background-image: url(assets/img/"+item.img+")")
 							.work-item__content
 								.work-item__text= item.text
@@ -294,18 +294,18 @@ block content
 									.news-item__text= item.text
 
 					.row
-						.col-4
+						.col-md-4
 							a(href="#").link-more
 								span.link-more__text Смотреть все статьи
 								span.link-more__icon
 									+svg('ic-arr-right','ic-arr-right', '14', '12')
 
-						.col-8
+						.col-md-8
 							.js-valid-form
 								form.form-line.form-line_small
 									.form-line__content
 										.form-line__fields
-											.form-line__item.js-form-line-item
+											.form-line__item.js-form-site-item
 												input(type="email", required="required", placeholder="Введите Ваш e-mail, чтобы подписаться на рассылку *")
 
 										.form-line__btn

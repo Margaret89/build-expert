@@ -78,3 +78,27 @@
 
 	&__img-wrap:hover &__img{transform: translate(-50%, -50%) scale(1.05);}
 }
+
+@media (max-width: 991px) {
+	.news-slider-wrap{padding: 70px 0;}
+
+	.news-item{
+		&__text{font-size: 1.4rem;}
+	}
+}
+
+@media (max-width: 767px) {
+	.news-slider-wrap{
+		padding: 40px 0;
+
+		.news-slider{
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+
+		.form-line{
+			margin-top: 30px;
+			.btn{width: 100%;}
+		}
+	}
+}

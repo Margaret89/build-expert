@@ -5,3 +5,18 @@
 
 	&__img{text-align: center;}
 }
+
+@media (max-width: 991px) {
+	.about{padding: 70px 0;}
+}
+
+@media (max-width: 767px) {
+	.about{
+		padding: 40px 0;
+
+		&__img{
+			max-width: 80%;
+			margin: 0 auto 20px;
+		}
+	}
+}

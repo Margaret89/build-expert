@@ -138,3 +138,25 @@
 
 	&:hover .icon{fill: $color-orange;}
 }
+
+@media (max-width: 991px) {
+	.top-slider-wrap{padding-top: 0;}
+}
+
+@media (max-width: 767px) {
+	.top-slider{
+		margin-left: -15px;
+		margin-right: -15px;
+		&__title{font-size: 2.4rem;}
+		&__text{font-size: 1.4rem;}
+
+		&__content{
+			text-align: center;
+			
+			.btn{
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+/*-------------- fancybox -----------------*/
+.fancybox{
+	&__content{
+		max-width: 100%;
+		border-radius: 3px 20px 3px 20px;
+		// padding: 80px 100px;
+	}
+
+	&__content :focus:not(.carousel__button.is-close){outline: none;}
+}
+
+@media (max-width: 991px) {
+	.fancybox{
+		&__content{padding: 40px 20px;}
+	}
+}
