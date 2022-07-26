@@ -1,0 +1,31 @@
+/*-------------- consult -----------------*/
+.consult{
+	background: url(../img/bg-consult.jpg) no-repeat top center;
+	background-attachment: fixed;
+	padding: 65px 0 55px;
+	position: relative;
+
+	&__img{
+		text-align: right;
+		margin-top: -130px;
+		margin-bottom: -55px;
+	}
+
+	&__bg{
+		position: absolute;
+		top: -50px;
+		left: 63%;
+	}
+
+	.form-line{
+		padding-left: 43px;
+		position: relative;
+
+		&__title{color: #fff;}
+
+		&__polit{
+			max-width: calc(100% - 280px);
+			color: #cbcbcb;
+		}
+	}
+}

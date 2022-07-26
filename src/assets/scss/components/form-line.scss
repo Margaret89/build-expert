@@ -1,0 +1,111 @@
+/*-------------- form-line -----------------*/
+.form-line{
+	&__title{
+		@include font(none, bold, 3.2rem, 1.2, none);
+		margin-bottom: 24px;
+	}
+
+	&__text{
+		@include font(none, none, 1.6rem, 1.375, none);
+		margin-bottom: 20px;
+	}
+
+	&__content{
+		display: flex;
+		align-items: center;
+	}
+
+	&__item.error{position: relative;}
+
+	&__fields{
+		flex-basis: 100%;
+		margin-right: 20px;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="number"],
+	input[type="password"],
+	textarea{
+		display: inline-flex;
+		align-items: center;
+		height: 5.3rem;
+		width: 100%;
+		font-family: $font-site;
+		@include font(none, none, 1.4rem, 1.2, $color-text);
+		padding: 0 15px; 
+		border-radius: 3px;
+		border: 2px solid #e8e8e8;
+		background: #fff;
+		outline: none;
+		margin: 0;
+		box-shadow: none;
+		transition: border 0.2s ease 0s;
+	}
+
+	textarea{
+		height: 10.4rem;
+		line-height: 1.6;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+
+	input[type="text"]:focus,
+	input[type="number"]:focus,
+	input[type="email"]:focus,
+	input[type="password"]:focus,
+	textarea:focus{
+		border-color: $color-orange;
+	}
+
+	&__item.error{
+		input[type="text"],
+		input[type="number"],
+		input[type="email"],
+		input[type="password"],
+		textarea{
+			border-color: #fc6262;
+		}
+
+		input[type="text"]::placeholder,
+		input[type="number"]::placeholder,
+		input[type="email"]::placeholder,
+		input[type="password"]::placeholder,
+		textarea::placeholder{
+			color: $color-red;
+			opacity: 1;
+		}
+	}
+
+	&__polit{
+		@include font(none, none, 1.6rem, 1.2, none);
+		margin-top: 20px;
+	}
+
+	.form-site-msg-error{
+		@include font(none, none, 1.4rem, 1.2, $color-red);
+		margin-top: 5px;
+		position: absolute;
+		top: 100%;
+		left: 0;
+	}
+
+	.btn{
+		height: 5.3rem;
+		width: 260px;
+	}
+
+	&_small{
+		input[type="text"],
+		input[type="email"],
+		input[type="number"],
+		input[type="password"],
+		textarea{
+			height: 4.2rem;
+		}
+
+		.btn{height: 4.2rem;}
+	}
+
+	&_small &__polit{font-size: 1.4rem;}
+}

@@ -1,0 +1,32 @@
+/*-------------- addresses -----------------*/
+.addresses-wrap{
+	padding: 90px 0;
+	background: url(../img/map.png) no-repeat center;
+
+	h2, .h2{
+		text-align: center;
+		margin-bottom: 52px;
+	}
+}
+
+.addresses{
+	column-count: 4;
+	column-gap: 20px;
+
+	&__item{
+		display: flex;
+		align-items: center;
+		margin-bottom: 5px;
+	}
+
+	&__icon{
+		flex-shrink: 0;
+		margin-right: 5px;
+
+		.icon{fill: $color-text;}
+	}
+	
+	&__text{
+		@include font(none, none, 1.6rem, 1.375, $color-text);;
+	}
+}

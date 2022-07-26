@@ -1,4 +1,4 @@
-import {$} from './common';
+import {$, Inputmask, Fancybox} from './common';
 
 // Маска для телефона
 Inputmask('+7 (999) 999-9999').mask('.js-phone');
@@ -79,5 +79,28 @@ if($('.js-valid-form').length){
 
 		$(this)[0].reset();
 		e.preventDefault();
+	});
+}
+
+// Верхний слайдер
+if($('.js-top-slider').length){
+	$('.js-top-slider').slick({
+		infinite: true,
+		dots: true,
+		appendArrows: $('.js-top-slider-nav'),
+		prevArrow: '<button id="prev" type="button" class="top-slider-arr top-slider-arr_left"><svg class="icon ic-arrow-left" width="9" height="15"><use xlink:href="/assets/sprites/sprite.svg#ic-arrow-left"></use></svg></button>',
+		nextArrow: '<button id="next" type="button" class="top-slider-arr top-slider-arr_right"><svg class="icon ic-arrow-right" width="9" height="15"><use xlink:href="/assets/sprites/sprite.svg#ic-arrow-right"></use></svg></button>',
+		appendDots: $('.js-top-slider-nav'),
+	});
+}
+
+// Слайдер новостей
+if($('.js-news-slider').length){
+	$('.js-news-slider').slick({
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		prevArrow: '<button id="prev" type="button" class="btn-arr btn-arr_left"><svg class="icon ic-arrow-left" width="9" height="15"><use xlink:href="/assets/sprites/sprite.svg#ic-arrow-left"></use></svg></button>',
+		nextArrow: '<button id="next" type="button" class="btn-arr btn-arr_right"><svg class="icon ic-arrow-right" width="9" height="15"><use xlink:href="/assets/sprites/sprite.svg#ic-arrow-right"></use></svg></button>',
 	});
 }

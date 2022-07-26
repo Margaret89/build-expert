@@ -1,0 +1,35 @@
+/*-------------- advant -----------------*/
+.advant-wrap{
+	padding: 0 0 115px;
+}
+
+.advant{
+	background: #fff;
+	border-radius: 20px 3px 20px 3px;
+	box-shadow: 0px 2px 16px 0px rgba(185, 200, 207, 0.42);
+	padding: 20px 0;
+}
+
+.advant-item{
+	text-align: center;
+	margin: 32px 0;
+
+	&__icon{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 60px;
+		margin-bottom: 5px;
+
+		.icon{
+			max-height: 100%;
+			fill: #000;
+		}
+	}
+
+	&__text{
+		@include font(none, bold, 2.3rem, 1.2, none);
+	}
+
+	&__text_line{text-decoration: underline;}
+}
