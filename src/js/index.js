@@ -148,6 +148,40 @@ if($('.js-gallery-slider').length){
 	});
 }
 
+// Слайдер сертификатов
+if($('.js-certif-slider').length){
+	$('.js-certif-slider').slick({
+		infinite: true,
+		slidesToShow: 5,
+		slidesToScroll: 5,
+		prevArrow: '<button id="prev" type="button" class="btn-arr btn-arr_left"><svg class="icon ic-arrow-left" width="9" height="15"><use xlink:href="/assets/sprites/sprite.svg#ic-arrow-left"></use></svg></button>',
+		nextArrow: '<button id="next" type="button" class="btn-arr btn-arr_right"><svg class="icon ic-arrow-right" width="9" height="15"><use xlink:href="/assets/sprites/sprite.svg#ic-arrow-right"></use></svg></button>',
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 4,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3,
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				}
+			},
+		  ]
+	});
+}
+
 // Открыть/Закрыть мобильное меню
 $('.js-open-menu').on('click',function(){
 	$('.js-main-menu').addClass('open');
