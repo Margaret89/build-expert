@@ -1,0 +1,65 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Услуги разделы';
+	- var h1 = 'Техническое обследование зданий и сооружений, опасных производственных объектов';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Услуги'},
+			{href:'#',name:'Техническое обследование зданий и сооружений, опасных производственных объектов'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.serv-subsect-wrap
+		.container
+			.row
+				.col-12
+					.serv-subsect
+						-
+							var list=[
+								{text:'Оценка технического состояния зданий и сооружений, инженерных сетей'},
+								{text:'Оценка влияния природных и техногенных воздействий на состояние и эксплуатационную пригодность обследуемых объектов'},
+								{text:'Разработка рекомендаций по усилению конструкций, устранению дефектов и повреждений'},
+								{text:'Разработка программы мониторинга, мониторинг состояния'},
+								{text:'Тепловизионное обследование зданий и сооружений '},
+								{text:'Обмеры строительных конструкций, замеры накопленных деформаций'},
+								{text:'Теплотехнический расчет ограждающих конструкций'},
+								{text:'Расчеты конструкций, в т.ч. на особое воздействие'},
+								{text:'обследование специальных сооружений'},
+								{text:'Тепловизионное обследование зданий и сооружений '},
+							]
+						each item in list
+							a(href="#").serv-subsect__item= item.text
+
+	
+	section.serv-sect-wrap
+		.container
+			.row
+				.col-12
+					h2 Другие услуги компании
+
+					.serv-sect
+						-
+							var list=[
+								{icon:'ic-hotel', icon_width:'60', icon_height:'60', text:'Техническое обследование зданий и сооружений, опасных производственных объектов'},
+								{icon:'ic-nuclear-plant', icon_width:'60', icon_height:'60', text:'Техническое обследование объектов энергетики.'},
+								{icon:'ic-government', icon_width:'60', icon_height:'60', text:'Техническое обследование объектов культурного наследия (ОКН)'},
+								{icon:'ic-teamwork', icon_width:'60', icon_height:'60', text:'Мониторинг строительных объектов'},
+								{icon:'ic-escalator', icon_width:'60', icon_height:'56', text:'Сопровождение строительства'},
+								{icon:'ic-crane', icon_width:'60', icon_height:'60', text:'Строительная экспертиза'},
+								{icon:'ic-architecture', icon_width:'60', icon_height:'60', text:'Строительное проектирование '},
+								{icon:'ic-insurance', icon_width:'60', icon_height:'60', text:'Строительный контроль'},
+								{icon:'ic-ground', icon_width:'60', icon_height:'60', text:'Неразрушающий контроль'},
+							]
+						each item in list
+							a(href="#").serv-sect__item
+								.serv-sect__icon
+									+svg(item.icon, item.icon, item.icon_width, item.icon_height)
+								.serv-sect__title= item.text
+
+	

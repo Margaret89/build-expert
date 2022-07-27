@@ -14,11 +14,11 @@ block breadcrumb
 	+breadcrumbs(breadcrumbs)
 
 block content
-	section.serv-sect
+	section.serv-sect-wrap
 		.container
 			.row
 				.col-12
-					.serv-sect__list
+					.serv-sect
 						-
 							var list=[
 								{icon:'ic-hotel', icon_width:'60', icon_height:'60', text:'Техническое обследование зданий и сооружений, опасных производственных объектов'},
@@ -36,6 +36,7 @@ block content
 								.serv-sect__icon
 									+svg(item.icon, item.icon, item.icon_width, item.icon_height)
 								.serv-sect__title= item.text
+
 
 	section.works-wrap
 		.container

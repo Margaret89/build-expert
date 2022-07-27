@@ -80,11 +80,13 @@
 	&:hover{color: $color-text;}
 }
 
+.serv-sect-wrap{
+	&:not(:first-child){margin-top: 70px;}
+}
+
 .serv-sect{
-	&__list{
-		display: flex;
-		flex-wrap: wrap;
-	}
+	display: flex;
+	flex-wrap: wrap;
 
 	&__item{
 		display: block;
@@ -119,6 +121,22 @@
 	}
 
 	&__item:hover &__title{color: $color-orange;}
+}
+
+.serv-subsect{
+	border-radius: 3px;
+	border: 2px solid #e6ebed;
+
+	&__item{
+		display: block;
+		padding: 15px 20px 14px;
+		@include font(none, none, 1.4rem, 1.2, $color-text);
+		text-decoration: none;
+		transition: color 0.2s ease 0s;
+	}
+
+	&__item:not(:last-child){border-bottom: 2px solid #e6ebed;}
+	&__item:hover{color: $color-orange;}
 }
 
 @media (max-width: 991px) {
