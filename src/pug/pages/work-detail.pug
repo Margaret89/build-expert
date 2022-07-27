@@ -1,0 +1,43 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Выполненная работа';
+	- var h1 = 'Обследование опор ВЛ330КВ «Чудово-Окуловская-Бологое» (ВЛ 361)';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Объекты'},
+			{href:'#',name:'Выполненные работы'},
+			{href:'#',name:'Обследование опор ВЛ330КВ «Чудово-Окуловская-Бологое» (ВЛ 361)'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.works-detail
+		.container
+			.row
+				.col-12
+					.gallery-slider.js-gallery-slider
+						-
+							var list=[
+								{img:'work-slide1.jpg'},
+								{img:'work-slide2.jpg'},
+								{img:'work-slide3.jpg'},
+								{img:'work-slide2.jpg'},
+								{img:'work-slide1.jpg'},
+								{img:'work-slide3.jpg'},
+							]
+						each item in list
+							a(data-fancybox='gallery', data-src='assets/img/'+item.img).gallery-slider__item
+								.gallery-slider__img(style="background-image: url(assets/img/"+item.img+")")
+					
+					.works-detail__desc
+						p
+							b Цель обследования: 
+							br
+							|определение работоспособности опор и объема ремонтных работ для реконструкции линии электропередач.
+
+						p Проведены работы по визуальному осмотру, измерению коррозионного износа конструкций, измерения крена опор, оценка состояния анкерных болтов и фундаментов оттяжек, усилий натяжения в оттяжках. По результатам обмеров выполнены поверочные расчеты конструкций с заданием фактических размеров и кренов конструкций.

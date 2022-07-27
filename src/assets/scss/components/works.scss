@@ -48,6 +48,10 @@
 	&:hover &__more{display: inline-block;}
 }
 
+.works-detail{
+	.gallery-slider{margin-bottom: 40px;}
+}
+
 @media (max-width: 767px) {
 	.works-wrap{
 		padding: 40px 0;

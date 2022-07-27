@@ -121,6 +121,33 @@ if($('.js-news-slider').length){
 	});
 }
 
+// Слайдер галереи
+if($('.js-gallery-slider').length){
+	$('.js-gallery-slider').slick({
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		prevArrow: '<button id="prev" type="button" class="btn-arr btn-arr_left"><svg class="icon ic-arrow-left" width="9" height="15"><use xlink:href="/assets/sprites/sprite.svg#ic-arrow-left"></use></svg></button>',
+		nextArrow: '<button id="next" type="button" class="btn-arr btn-arr_right"><svg class="icon ic-arrow-right" width="9" height="15"><use xlink:href="/assets/sprites/sprite.svg#ic-arrow-right"></use></svg></button>',
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2,
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				}
+			},
+		  ]
+	});
+}
+
 // Открыть/Закрыть мобильное меню
 $('.js-open-menu').on('click',function(){
 	$('.js-main-menu').addClass('open');
@@ -131,3 +158,4 @@ $('.js-close-menu').on('click',function(){
 	$('.js-main-menu').removeClass('open');
 	$('.js-body').removeClass('no-scroll');
 });
+

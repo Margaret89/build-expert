@@ -24,8 +24,7 @@
 		transition: fill 0.2s ease 0s;
 	}
 
-	&:hover{background: $color-orange;}
-	&:hover .icon{fill: #fff;}
+	&:hover .icon{fill: $color-blue;}
 	
 	&_left{left: -8px;}
 	&_right{right: -8px;}
