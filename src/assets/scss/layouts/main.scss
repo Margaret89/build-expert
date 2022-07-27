@@ -219,6 +219,9 @@ button.btn{
 	&_orange:hover &__icon .icon{fill: $color-text;}
 }
 
+.img-border{border-radius: 3px 20px 3px 20px;}
+.img-border-wrap{margin-top: 30px;}
+
 @media (max-width: 767px) {
 	body{font-size: 1.4rem;}
 
