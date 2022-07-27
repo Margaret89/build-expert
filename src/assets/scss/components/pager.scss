@@ -1,0 +1,71 @@
+/*-------------- pager -----------*/
+.pager{
+	display: inline-flex;
+	margin-top: 30px;
+
+	&__item{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		vertical-align: top;
+		width: 37px;
+		height: 32px;
+		@include font(none, none, 1.4rem, 1, $color-text);
+		text-decoration: none;
+		background: #fff;
+		transition: all 0.2s ease;
+	}
+
+	&__item:not(:last-child){border-right: 1px solid #e5eaec;}
+
+	&__item:hover,
+	&__item.active{
+		color: $color-orange;
+	}
+
+	&__sect{
+		display: inline-flex;
+		box-shadow: 0px 2px 16px 0px rgba(185, 200, 207, 0.42);
+	}
+
+	&__more{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		vertical-align: top;
+		width: 37px;
+		height: 32px;
+		@include font(none, none, 1.4rem, 1, $color-text);
+		text-decoration: none;
+		background: #fff;
+		transition: all 0.2s ease;
+	}
+
+	// &__nav{
+	// 	display: inline-flex;
+	// 	align-items: center;
+	// 	justify-content: center;
+	// 	width: 32px;
+	// 	height: 32px;
+	// 	cursor: pointer;
+	// 	text-decoration: none;
+	// 	border: 1px solid #e5eaec;
+
+	// 	.icon{
+	// 		display: block;
+	// 		fill: $color-text;
+	// 		transition: fill 0.2s ease 0s;
+	// 	}
+
+	// 	&:hover .icon{fill: $color-orange;}
+
+	// 	&.disable{
+	// 		opacity: 0.5;
+	// 		cursor: auto;
+	// 	}
+
+	// 	&.disable:hover{
+	// 		.icon{fill: $color-text;}
+	// 	}
+	// }
+}

@@ -1,0 +1,62 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Выполненные работы';
+	- var h1 = 'Выполненные нами работы';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Объекты'},
+			{href:'#',name:'Выполненные работы'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.works-list
+		.container
+			.row
+				-
+					var list=[
+						{img:'work1.jpg', text:'Очистные сооружения ПО «Киришинефтеоргсинтез»'},
+						{img:'work2.jpg', text:'Определение соответствия правилам технической безопасности различных объектов завода'},
+						{img:'work3.jpg', text:'Экспертиза монолитных ж.б. конструкций здания «Сбербанка» в Великом Новгороде'},
+						{img:'work4.jpg', text:'Грануляционные башни производства НАФ (г. Великий Новгород)'},
+						{img:'work5.jpg', text:'Обследование межцеховых и внутрицеховых эскалад цеха аммиачной селитры (Смоленская область)'},
+						{img:'work6.jpg', text:'Техническое диагностирование печи первичного риформинга цеха аммиака'},
+						{img:'work1.jpg', text:'Очистные сооружения ПО «Киришинефтеоргсинтез»'},
+						{img:'work2.jpg', text:'Определение соответствия правилам технической безопасности различных объектов завода'},
+						{img:'work3.jpg', text:'Экспертиза монолитных ж.б. конструкций здания «Сбербанка» в Великом Новгороде'},
+						{img:'work4.jpg', text:'Грануляционные башни производства НАФ (г. Великий Новгород)'},
+						{img:'work5.jpg', text:'Обследование межцеховых и внутрицеховых эскалад цеха аммиачной селитры (Смоленская область)'},
+						{img:'work6.jpg', text:'Техническое диагностирование печи первичного риформинга цеха аммиака'},
+					]
+				each item in list
+					.col-sm-6.col-lg-4
+						a(href="#").work-item(style="background-image: url(assets/img/"+item.img+")")
+							.work-item__content
+								.work-item__text= item.text
+								.work-item__more Подробнее
+									+svg('ic-eye','ic-eye', '24', '20')
+
+			.row
+				.col-12
+					.pager
+						//- span.pager__nav.disable
+						//- 	+svg('ic-arrow-left','ic-arrow-left', '6', '12')
+						span.pager__sect
+							a.pager__item.active(href='#') 1
+							a.pager__item(href='#') 2
+							a.pager__item(href='#') 3
+							a.pager__item(href='#') 4
+
+						span.pager__more ...
+
+						span.pager__sect
+							a.pager__item(href='#') 19
+							a.pager__item(href='#') 20
+
+						//- a.pager__nav(href="")
+						//- 	+svg('ic-arrow-right','ic-arrow-right', '6', '12')

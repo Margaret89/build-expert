@@ -1,0 +1,31 @@
+/*-------------- breadcrumb -----------------*/
+.breadcrumb{
+	&,
+	&__item{
+		@include reset-list;
+	}
+
+	&{padding: 18px 0 15px;}
+
+	&__item{
+		display: inline;
+		@include font(none, none, 1.2rem, 1.2, $color-text);
+		margin-top: 5px;
+		margin-bottom: 5px;
+
+		a{
+			color: $color-orange;
+			text-decoration: none;
+			transition: color 0.2s ease 0s;
+		}
+
+		a:hover{color: $color-text;}
+	}
+
+	&__item:not(:last-child)::after{
+		content: '>';
+		margin-left: 4px;
+		margin-right: 4px;
+		color: #bccfd5;
+	}
+}
