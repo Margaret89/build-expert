@@ -1,0 +1,106 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Статьи компании';
+	- var h1 = 'Статьи компании';
+
+block breadcrumb
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Статьи компании'},
+		];
+
+	+breadcrumbs(breadcrumbs)
+
+block content
+	section.news-list
+		.container
+			.row
+				-
+					var list=[
+						{img:'news1.jpg', title:'Новость компании', text:'Применение новейшего оборудования в совокупности с современными методами обследования'},
+						{img:'news2.jpg', title:'Новость компании', text:'Применен современными методами обследования'},
+						{img:'news3.jpg', title:'Новость компании', text:'Применение новейшего оборудования в совокупности с современными методами обследования'},
+						{img:'news1.jpg', title:'Новость компании', text:'Применение новейшего оборудования в совокупности с современными методами обследования'},
+						{img:'news2.jpg', title:'Новость компании', text:'Применен современными методами обследования'},
+						{img:'news3.jpg', title:'Новость компании', text:'Применение новейшего оборудования в совокупности с современными методами обследования'},
+						{img:'news1.jpg', title:'Новость компании', text:'Применение новейшего оборудования в совокупности с современными методами обследования'},
+						{img:'news2.jpg', title:'Новость компании', text:'Применен современными методами обследования'},
+						{img:'news3.jpg', title:'Новость компании', text:'Применение новейшего оборудования в совокупности с современными методами обследования'},
+						{img:'news1.jpg', title:'Новость компании', text:'Применение новейшего оборудования в совокупности с современными методами обследования'},
+						{img:'news2.jpg', title:'Новость компании', text:'Применен современными методами обследования'},
+						{img:'news3.jpg', title:'Новость компании', text:'Применение новейшего оборудования в совокупности с современными методами обследования'},
+					]
+				each item in list
+					.col-sm-6.col-lg-4
+						.news-item
+							a(href="#").news-item__img-wrap
+								.news-item__img(style="background-image: url(assets/img/"+item.img+")")
+
+							.news-item__content
+								.news-item__title
+									a(href="#")= item.title
+								.news-item__text= item.text
+			.row
+				.col-12
+					.pager
+						//- span.pager__nav.disable
+						//- 	+svg('ic-arrow-left','ic-arrow-left', '6', '12')
+						span.pager__sect
+							a.pager__item.active(href='#') 1
+							a.pager__item(href='#') 2
+							a.pager__item(href='#') 3
+							a.pager__item(href='#') 4
+
+						span.pager__more ...
+
+						span.pager__sect
+							a.pager__item(href='#') 19
+							a.pager__item(href='#') 20
+
+						//- a.pager__nav(href="")
+						//- 	+svg('ic-arrow-right','ic-arrow-right', '6', '12')
+
+	section.subscribe.bg-grey
+		.container
+			.row
+				.offset-lg-2.col-lg-8
+					.js-valid-form
+						form.form-line.form-line_small
+							.form-line__content
+								.form-line__fields
+									.form-line__item.js-form-site-item
+										input(type="email", required="required", placeholder="Введите Ваш e-mail, чтобы подписаться на рассылку *")
+
+								.form-line__btn
+									button(type="submit").btn.js-btn-submit Подписаться
+							
+							.form-line__polit Нажимая кнопку «Подписаться» Вы соглашаетесь на обработку Ваших персональных данных
+
+	section.certificates
+		.container
+			.row
+				.col-12
+					h2 Лицензии компании
+
+					.certif-slider.js-certif-slider
+						-
+							var list=[
+								{img:'certificate.jpg'},
+								{img:'certificate.jpg'},
+								{img:'certificate.jpg'},
+								{img:'certificate.jpg'},
+								{img:'certificate.jpg'},
+								{img:'certificate.jpg'},
+								{img:'certificate.jpg'},
+								{img:'certificate.jpg'},
+								{img:'certificate.jpg'},
+								{img:'certificate.jpg'},
+								{img:'certificate.jpg'},
+								{img:'certificate.jpg'},
+								{img:'certificate.jpg'},
+							]
+						each item in list
+							a(data-fancybox='gallery', data-src='assets/img/'+item.img).certif-slider__item
+								img(src="assets/img/"+item.img, alt="")
