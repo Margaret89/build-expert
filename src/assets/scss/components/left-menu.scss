@@ -1,0 +1,46 @@
+/*-------------- left-menu -----------------*/
+.left-menu{
+	&,
+	&__item{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	&{
+		border-radius: 3px;
+		border: 2px solid #e6ebed;
+	}
+
+	&__item{
+		position: relative;
+
+		&::before{
+			content: '';
+			width: 2px;
+			height: 100%;
+			background: $color-orange;
+			position: absolute;
+			top: 0;
+			left: -2px;
+			opacity: 0;
+			transition: opacity 0.2s ease 0s;
+		}
+
+		&:hover::before{opacity: 1;}
+	}
+	
+	&__link{
+		display: block;
+		padding: 12px 20px;
+		@include font(none, none, 1.6rem, 1.2, $color-text);
+		text-decoration: none;
+	}
+	
+	&__item:not(:last-child){border-bottom: 2px solid #e6ebed;}
+	&__item:hover &__link{color: $color-orange;}
+}
+
+@media (max-width: 767px) {
+	.left-menu{margin-bottom: 30px;}
+}

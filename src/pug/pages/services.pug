@@ -56,7 +56,8 @@ block content
 					]
 				each item in list
 					.col-sm-6.col-lg-4
-						a(href="#").work-item(style="background-image: url(assets/img/"+item.img+")")
+						a(href="#").work-item
+							.work-item__bg(style="background-image: url(assets/img/"+item.img+")")
 							.work-item__content
 								.work-item__text= item.text
 								.work-item__more Подробнее

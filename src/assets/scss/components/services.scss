@@ -139,11 +139,48 @@
 	&__item:hover{color: $color-orange;}
 }
 
+.service-detail{
+	&__top{margin-bottom: 35px;}
+	.left-menu{margin-top: 10px;}
+}
+
+.service-form{
+	margin: 40px 0;
+
+	&__content{
+		border-radius: 3px 20px 3px 20px;
+		background: url(../img/bg-form.jpg) no-repeat center;
+		color: #fff;
+		padding: 65px 0 85px;
+	}
+
+	.form-line{
+		&__title,
+		&__polit{
+			text-align: center;
+		}
+
+		&__polit{
+			font-size: 1.4rem;
+			margin-top: 25px;
+		}
+	}
+}
+
+.service-other{margin-top: 35px;}
+
 @media (max-width: 991px) {
 	.services-wrap{padding: 58px 0 80px;}
 
 	.serv-sect{
 		&__item{width: calc(50% + 2px);}
+	}
+
+	.service-form{
+		&__content{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
 	}
 }
 
@@ -172,5 +209,9 @@
 		}
 
 		&__title{font-size: 1.6rem;}
+	}
+
+	.service-form{
+		&__content{padding: 35px 15px;}
 	}
 }
